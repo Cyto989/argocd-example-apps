@@ -30,7 +30,7 @@ spec:
           lifecycle:
             postStart:
               exec:
-                command: ["/bin/sh", "-c", "sleep 5"]
+                command: ["/bin/sh", "-c", "sleep 8"]
           livenessProbe:
             httpGet:
               path: /

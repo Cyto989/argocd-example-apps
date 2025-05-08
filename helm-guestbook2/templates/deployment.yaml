@@ -27,6 +27,10 @@ spec:
             - name: http
               containerPort: {{ .Values.containerPort }}
               protocol: TCP
+          lifecycle:
+            postStart:
+              exec:
+                command: ["/bin/sh", "-c", "sleep 8"]
           livenessProbe:
             httpGet:
               path: /
