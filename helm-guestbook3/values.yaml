@@ -4,6 +4,11 @@
 
 replicaCount: 1
 
+app:
+  name: guestbook2
+
+fullnameOverride: "guestbook3"
+
 image:
   repository: gcr.io/heptio-images/ks-guestbook-demo
   tag: 0.1
