@@ -32,7 +32,7 @@ spec:
               command:
                 - sh
                 - -c
-                - "sleep 20 && exit 0"
+                - "sleep 15 && exit 0"
             initialDelaySeconds: 0
             periodSeconds: 5
             failureThreshold: 1

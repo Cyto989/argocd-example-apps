@@ -32,11 +32,11 @@ spec:
               command:
                 - sh
                 - -c
-                - "sleep 20 && exit 0"
+                - "sleep 15  && exit 0"
             initialDelaySeconds: 0
             periodSeconds: 5
             failureThreshold: 1
-            timeoutSeconds: 30
+            timeoutSeconds: 17
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
