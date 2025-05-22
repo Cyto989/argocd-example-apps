@@ -36,7 +36,7 @@ spec:
             initialDelaySeconds: 0
             periodSeconds: 5
             failureThreshold: 1
-            timeoutSeconds: 17
+            timeoutSeconds: 30
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
