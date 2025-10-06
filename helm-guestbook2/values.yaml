@@ -7,7 +7,7 @@ replicaCount: 1
 app:
   enabled: true
   name: guestbook2
-  minReplicas: 1
+  minReplicas: 2
   maxReplicas: 5
   targetCPUUtilizationPercentage: 50
 
