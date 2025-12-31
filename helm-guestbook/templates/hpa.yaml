@@ -4,7 +4,7 @@ kind: HorizontalPodAutoscaler
 metadata:
   name: {{ include "helm-guestbook.fullname" . }}
   labels:
-    cron-workload-scaler/baselineMaxReplicas: {{ .Values.app.maxReplicas | quote }}
+    cron-workload-scaler/baselineMaxReplicas: {{ default .Values.app.maxReplicas .Values.app.baselineMaxReplicas | quote }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
