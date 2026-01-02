@@ -1,0 +1,15 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: {{ include "cron-workload-scaler.fullname" . }}-configmap-editor
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "cron-workload-scaler.labels" . | nindent 4 }}
+subjects:
+- kind: ServiceAccount
+  name: {{ include "cron-workload-scaler.fullname" . }}-sa
+  namespace: {{ .Release.Namespace }}
+roleRef:
+  kind: Role
+  name: {{ include "cron-workload-scaler.fullname" . }}-configmap-editor
+  apiGroup: rbac.authorization.k8s.io
