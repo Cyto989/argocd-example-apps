@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: cron-workload-scaler-sa
-  namespace: {{ .Release.Namespace }}
-  labels:
-    {{- include "cron-workload-scaler.labels" . | nindent 4 }}
