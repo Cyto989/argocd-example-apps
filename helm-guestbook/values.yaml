@@ -15,7 +15,7 @@ app:
   enabled: true
   baselineMaxReplicas: null
   minReplicas: 1
-  maxReplicas: 5
+  maxReplicas: 10
   targetCPUUtilizationPercentage: 50
 
 service:
