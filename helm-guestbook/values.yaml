@@ -1,27 +1,28 @@
 affinity: {}
 app:
   enabled: true
-  baselineMaxReplicas: null
   minReplicas: 1
   maxReplicas: 10
+  name: guestbook
   targetCPUUtilizationPercentage: 50
 containerPort: 80
 fullnameOverride: "guestbook"
 image:
+  pullPolicy: IfNotPresent
   repository: quay.io/argoprojlabs/argocd-e2e-container
   tag: 0.1
-  pullPolicy: IfNotPresent
 ingress:
   enabled: false
   annotations: {}
-  path: /
   hosts:
     - chart-example.local
+  path: /
   tls: []
 nodeSelector: {}
 resources:
   requests:
-tolerations: []
+    cpu: 100m
 service:
-  type: ClusterIP
   port: 80
+  type: ClusterIP
+tolerations: []
