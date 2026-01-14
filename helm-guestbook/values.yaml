@@ -18,6 +18,8 @@ app:
   maxReplicas: 10
   targetCPUUtilizationPercentage: 50
 
+fullnameOverride: "guestbook"
+
 service:
   type: ClusterIP
   port: 80
