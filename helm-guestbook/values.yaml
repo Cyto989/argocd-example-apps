@@ -1,23 +1,16 @@
-image:
-  repository: quay.io/argoprojlabs/argocd-e2e-container
-  tag: 0.1
-  pullPolicy: IfNotPresent
-
-containerPort: 80
-
+affinity: {}
 app:
   enabled: true
   baselineMaxReplicas: null
   minReplicas: 1
   maxReplicas: 10
   targetCPUUtilizationPercentage: 50
-
+containerPort: 80
 fullnameOverride: "guestbook"
-
-service:
-  type: ClusterIP
-  port: 80
-
+image:
+  repository: quay.io/argoprojlabs/argocd-e2e-container
+  tag: 0.1
+  pullPolicy: IfNotPresent
 ingress:
   enabled: false
   annotations: {}
@@ -25,13 +18,10 @@ ingress:
   hosts:
     - chart-example.local
   tls: []
-
+nodeSelector: {}
 resources:
   requests:
-    cpu: 100m
-
-nodeSelector: {}
-
 tolerations: []
-
-affinity: {}
+service:
+  type: ClusterIP
+  port: 80
