@@ -26,3 +26,6 @@ service:
   port: 80
   type: ClusterIP
 tolerations: []
+globa:
+  configmap:
+    enabled: false
