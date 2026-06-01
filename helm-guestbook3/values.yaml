@@ -5,6 +5,8 @@ app:
   maxReplicas: 5
   name: guestbook3
   targetCPUUtilizationPercentage: 50
+  configmap:
+    enabled: false
 containerPort: 80
 fullnameOverride: "guestbook3"
 image:
