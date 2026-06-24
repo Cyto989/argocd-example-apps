@@ -25,3 +25,5 @@ dependencies:
   - name: backend-library
     version: 0.0.7
     repository: https://raw.githubusercontent.com/project-atl/helm-library-charts/gh-pages/
+
+# tmpcharts reproduction commit 20260624151837-1
