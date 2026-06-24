@@ -2,7 +2,7 @@ affinity: {}
 app:
   enabled: true
   minReplicas: 1
-  maxReplicas: 6
+  maxReplicas: 7
   name: guestbook3
   targetCPUUtilizationPercentage: 50
   configmap:
