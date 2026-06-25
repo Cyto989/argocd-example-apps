@@ -1,0 +1,77 @@
+affinity: {}
+app:
+  enabled: true
+  minReplicas: 3
+  maxReplicas: 11
+  name: app-guestbook-4
+  targetCPUUtilizationPercentage: 50
+  configmap:
+    enabled: false
+containerPort: 80
+fullnameOverride: "app-guestbook-4"
+image:
+  pullPolicy: IfNotPresent
+  repository: quay.io/argoprojlabs/argocd-e2e-container
+  tag: 0.1
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+    - chart-example.local
+  path: /
+  tls: []
+nodeSelector: {}
+resources:
+  requests:
+    cpu: 100m
+service:
+  port: 80
+  type: ClusterIP
+tolerations: []
+global:
+  configmap:
+    enabled: false
+# race-test-1782325912
+# race-test-1782326046
+# race-test-1782326061
+# race-test-1782326072
+# race-test-1782326084
+# race-test-1782326106
+# race-test-1782326148
+# race-test-1782326723
+# race-test-1782326734
+# race-test-1782326747
+# race-test-1782326800
+# race-test-1782326810
+# race-test-1782326822
+# race-test-1782326832
+# race-test-1782326843
+# race-test-1782326853
+# race-test-1782326864
+# race-test-1782326874
+# race-test-1782326885
+# race-test-1782326895
+# race-test-1782326973
+# race-test-1782327058
+# race-test-1782327079
+# race-test-1782327099
+# race-test-1782327120
+# race-test-1782327140
+# race-test-1782327159
+# race-test-1782327178
+# race-test-1782327197
+# race-test-1782327217
+# race-test-1782327237
+# race-test-1782327945
+# race-test-1782327965
+# race-test-1782327984
+# race-test-1782328003
+# race-test-1782328023
+# race-test-1782328042
+# race-test-1782328062
+# race-test-1782328082
+# race-test-1782328101
+# race-test-1782328122
+# race-test-1782328336
+# race-test-1782328663
+# race-test-1782328720

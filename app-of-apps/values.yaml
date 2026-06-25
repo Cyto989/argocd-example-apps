@@ -2,20 +2,19 @@ spec:
   project: default
   source:
     repoURL: https://github.com/Cyto989/argocd-example-apps
-    path: helm-guestbook3
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
     namespace: default
 
 apps:
-  - name: guestbook-01
-  - name: guestbook-02
-  - name: guestbook-03
-  - name: guestbook-04
-  - name: guestbook-05
-  - name: guestbook-06
-  - name: guestbook-07
-  - name: guestbook-08
-  - name: guestbook-09
-  - name: guestbook-10
+  - name: app-guestbook-1
+  - name: app-guestbook-2
+  - name: app-guestbook-3
+  - name: app-guestbook-4
+  - name: app-guestbook-5
+  - name: app-guestbook-6
+  - name: app-guestbook-7
+  - name: app-guestbook-8
+  - name: app-guestbook-9
+  - name: app-guestbook-10
