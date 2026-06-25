@@ -1,3 +1,0 @@
-{{- if .Values.app.configmap.enabled }}
-{{- include "backend-library.configmap" . }}
-{{- end -}}
